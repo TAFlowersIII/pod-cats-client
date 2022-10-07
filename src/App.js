@@ -72,6 +72,17 @@ function App() {
             element={currentUser ? <Profile handleLogout={handleLogout} currentUser={currentUser} setCurrentUser={setCurrentUser} /> : <Navigate to="/login" />}
           />
 
+          <Route
+            path="/cats"
+            element={<Cats />}
+          />
+
+          <Route
+           path="/about"
+           element={<About />}
+          />
+          <Route
+          />
         </Routes>
       </div>
     </Router>
