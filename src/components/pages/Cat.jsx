@@ -12,7 +12,9 @@ export default function Cat() {
     useEffect(() => {
         const getCat = async () => {
             try {
-
+                const response = await axios.get(`https://api.thecatapi.com/v1/images/${id}`)
+                console.log(response.data)
+                setCat(response.data)        
             } catch(err) {
                 console.warn(err)
                 if (err.response) {
@@ -40,7 +42,7 @@ export default function Cat() {
         <div>
             <h1>lil cat 🐈‍⬛</h1>
 
-            <p>image of cat</p>
+            <img src={cat.url} />
 
             <p>cat details</p>
 
