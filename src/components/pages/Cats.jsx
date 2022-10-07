@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function Cats(){
+export default function Cats() {
 
     const [cats, setCats] = useState([])
 
@@ -9,7 +9,7 @@ export default function Cats(){
         const getCats = async () => {
             try{
                 const response = await axios.get(`https://api.thecatapi.com/v1/images/search?limit=10`)
-                console.log(response.data)
+                // console.log(response.data)
                 setCats(response.data)
             }catch(err){
                 console.log(err)
@@ -18,15 +18,16 @@ export default function Cats(){
         getCats()
     },[])
 
-    const showCats = cats.forEach(cat => {
+    const showCats = cats.map(cat => {
         return(
             <div id={cat.id}>
-                <img src={cat.url} alt="a very cute cat"/>
+                <img  width="500px" src={cat.url} alt="a very cute cat"/>
             </div>
         )
     })
     return(
         <div>
+            <h1>cats</h1>
             {showCats}
         </div>
     )
