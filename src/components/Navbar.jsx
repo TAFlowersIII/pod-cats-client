@@ -34,6 +34,14 @@ export default function Navbar({ currentUser, handleLogout }) {
 				<p>User App</p>
 			</Link>
 
+			<Link to="/cats">
+				<p>see some cats</p>
+			</Link>
+			
+			<Link to="/about">
+				<p>About the dev team</p>
+			</Link>
+
 			{currentUser ? loggedIn : loggedOut}
 		</nav>
 	)
