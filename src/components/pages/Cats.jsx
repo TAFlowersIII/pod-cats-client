@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Cats() {
 
@@ -21,7 +22,9 @@ export default function Cats() {
     const showCats = cats.map(cat => {
         return(
             <div id={cat.id}>
+                <Link to={`/cats/id/${cat.id}`}>
                 <img  width="500px" src={cat.url} alt="a very cute cat"/>
+                </Link>
             </div>
         )
     })
