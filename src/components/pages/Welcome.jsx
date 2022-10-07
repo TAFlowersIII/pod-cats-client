@@ -14,9 +14,6 @@ export default function Welcome() {
 			<Link to={"./Login"}>
 				<button>Click To Log In</button>
 			</Link>
-			
-			
-		
 
 		</div>
 	)
