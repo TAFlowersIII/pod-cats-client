@@ -1,0 +1,22 @@
+<mxfile host="65bd71144e">
+    <diagram id="9z8EjFcslA-_OnBxPhj1" name="Page-1">
+        <mxGraphModel dx="1062" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="60" width="460" height="610" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;font style=&quot;font-size: 25px&quot;&gt;Welcome to Pod Cats!&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="120" width="260" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;font style=&quot;font-size: 20px&quot;&gt;View Profile&lt;br&gt;View Cats!&lt;br&gt;Sign Out&lt;br&gt;About&lt;br&gt;&lt;/font&gt;" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;fontSize=25;" parent="1" vertex="1">
+                    <mxGeometry x="390" y="450" width="120" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="[Cat Photo Of The Day]" style="whiteSpace=wrap;html=1;fontSize=20;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="190" width="310" height="200" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
