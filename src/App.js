@@ -81,6 +81,11 @@ function App() {
            path="/about"
            element={<About />}
           />
+
+          <Route
+            path="/cats/:id"
+            element={<Cat />}
+          />
           <Route
           />
         </Routes>
