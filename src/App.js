@@ -86,7 +86,7 @@ function App() {
           />
 
           <Route
-            path="/cats/:id"
+            path="/cats/id/:id"
             element={<Cat />}
           />
           <Route
