@@ -2,16 +2,20 @@ import { Link } from 'react-router-dom'
 
 export default function Navbar({ currentUser, handleLogout }) {
 	 const loggedIn = (
-		<>
+		<section>
 			{/* if the user is logged in... */}
 			<Link to="/">
 				<span onClick={handleLogout}>logout</span>
 			</Link>
-
+			<> | </>
 			<Link to="/profile">
 				profile
 			</Link>
-		</>
+			<> | </>
+			<Link to="/cats/new">
+				Add your cat
+			</Link>
+		</section>
 	 )
 
 	 const loggedOut = (
@@ -29,6 +33,8 @@ export default function Navbar({ currentUser, handleLogout }) {
 
 	return (
 		<nav>
+			{currentUser ? loggedIn : loggedOut}
+
 			{/* user always sees this section */}
 			<Link to="/">
 				<p>User App</p>
@@ -42,7 +48,6 @@ export default function Navbar({ currentUser, handleLogout }) {
 				<p>About the dev team</p>
 			</Link>
 
-			{currentUser ? loggedIn : loggedOut}
 		</nav>
 	)
 }
