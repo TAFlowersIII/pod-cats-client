@@ -63,7 +63,7 @@ export default function Profile({ currentUser, handleLogout }) {
 		</div>
 		)
 	})
-	console.log(currentUser)
+
 	return (
 		<div>
 			<h1>Hello, {currentUser.name}</h1>
