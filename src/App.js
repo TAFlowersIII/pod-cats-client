@@ -13,8 +13,10 @@ import Navbar from './components/Navbar'
 import Cats from './components/pages/Cats'
 import About from './components/pages/About'
 import Cat from './components/pages/Cat'
+import Feed from './components/pages/Feed'
 import './App.css'
 import jwt_decode from 'jwt-decode'
+import NewCat from './components/pages/NewCat'
 
 function App() {
   // the currently logged in user will be stored up here in state
@@ -88,6 +90,16 @@ function App() {
           <Route
             path="/cats/id/:id"
             element={<Cat />}
+          />
+
+          <Route
+            path='/feed'
+            element={<Feed />}
+          />
+
+          <Route
+            path='/cats/new'
+            element={<NewCat />}
           />
           <Route
           />
