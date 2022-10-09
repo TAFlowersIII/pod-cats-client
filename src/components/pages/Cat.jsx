@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { dblClick } from '@testing-library/user-event/dist/click'
 
 export default function Cat() {
     const [cat, setCat] = useState({})
@@ -13,7 +14,7 @@ export default function Cat() {
         const getCat = async () => {
             try {
                 const response = await axios.get(`https://api.thecatapi.com/v1/images/${id}`)
-                console.log(response.data)
+                // console.log(response.data)
                 setCat(response.data)        
             } catch(err) {
                 console.warn(err)
@@ -25,10 +26,15 @@ export default function Cat() {
         getCat()
     }, [])
 
-    const addFavorite = async () => {
+    console.log(cat)
+
+    const addFavorite = async (e) => {
         try {
+            // console.log(cat)
+            e.preventDefault()
             // need to determine where this is posting
-            await axios.post(`${process.env.REACT_APP_SERVER_URL}`)
+            await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
+            console.log()
         } catch(err) {
             console.warn(err)
             if (err.response) {
