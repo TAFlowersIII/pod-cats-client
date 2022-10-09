@@ -15,7 +15,7 @@ export default function NewCat(){
     const handleSubmit = async e => {
         try{
             e.preventDefault()
-            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, form)
+            const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             // navigate back to cats
             navigate('/feed')
         }catch(err) {
