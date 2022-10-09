@@ -39,7 +39,7 @@ export default function NewCat(){
                     id='header' 
                     value={cat.header}
                     placeholder="Mister Snuggles"
-                    onChange={e => setCat({...cat, name: e.target.value})}></input>
+                    onChange={e => setCat({...cat, header: e.target.value})}></input>
                 </div>
                 <div>
                     <label htmlFor='img_Url'>Image URL:</label>
@@ -57,7 +57,7 @@ export default function NewCat(){
                     id='content' 
                     value={cat.content}
                     placeholder='Describe your cat...' 
-                    onChange={e => setCat({...cat, rarity: e.target.value})}></input>
+                    onChange={e => setCat({...cat, content: e.target.value})}></input>
                 </div>
                 <button type='submit'>Add to Collection</button>
             </form>
