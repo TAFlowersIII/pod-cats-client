@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, navigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { dblClick } from '@testing-library/user-event/dist/click'
@@ -38,13 +38,13 @@ export default function Cat({currentUser}) {
 
     console.log(cat)
 
-    const addFavorite = async (e) => {
+    const addFavorite = async e => {
         try {
-            // console.log(cat)
             e.preventDefault()
-            // need to determine where this is posting
             await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             console.log("the current user is: " + currentUser)
+            // navigation not functional
+            navigate('/profile')
         } catch(err) {
             console.warn(err)
             if (err.response) {
