@@ -44,6 +44,10 @@ export default function Navbar({ currentUser, handleLogout }) {
 				<p>see some cats</p>
 			</Link>
 			
+			<Link to="/feed">
+				<p>Cat feed</p>
+			</Link>
+
 			<Link to="/about">
 				<p>About the dev team</p>
 			</Link>
