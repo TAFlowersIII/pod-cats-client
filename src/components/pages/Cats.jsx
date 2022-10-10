@@ -21,7 +21,7 @@ export default function Cats() {
 
     const showCats = cats.map(cat => {
         return(
-            <div id={cat.id}>
+            <div key={cat.id}>
                 <Link to={`/cats/id/${cat.id}`}>
                 <img  width="500px" src={cat.url} alt="a very cute cat"/>
                 </Link>
