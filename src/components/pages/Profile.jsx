@@ -38,19 +38,8 @@ export default function Profile({ currentUser, handleLogout }) {
 		// console.log(localStorage)
 		const getUsers = async () => {
 			try{
-				// const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users`, {_id: currentUser.id})
-				console.log(currentUser)
-				// console.log(currentUser.id)
-				// setUsers(response.data)
-				// const foundUser = users.map(user => {
-				// 		return(
-				// 		user._id
-				// 	)
-				// })
-				// console.log(foundUser)
-				//Match user with id
-				// const matchedUser = await foundUser.filter(user => user === currentUser.id)
-				// console.log(matchedUser)
+				console.log(currentUser.cats)
+				
 			}catch(err){
 				console.warn(err)
 				if(err.response){
@@ -65,18 +54,21 @@ export default function Profile({ currentUser, handleLogout }) {
 	},[])
 
 
-
-	// const showCats = user.cats.map(cat => {
-	// 		const catComment = cat.comments.map(comment =>{
-	// 			<p>{comment}</p>
-	// 		})
-	// 	return(
-	// 	<div key={cat._id}>
-	// 		<img src={cat.img_Url} />
-	// 		<p>{catComment}</p>
-	// 	</div>
-	// 	)
-	// })
+	const showCats = currentUser.cats.map(cat => {
+			// const catComment = cat.comments.map(comment =>{
+			// 	<p>{comment}</p>
+			// })
+			console.log(cat)
+			const url = `https://api.thecatapi.com/v1/images/${cat.catId}.jpg`
+			console.log(url)
+		return(
+		<div key={cat._id}>
+			<p>{cat.content}</p>
+			<img src={`https://api.thecatapi.com/v1/images/${cat.catId}.jpg`} />
+			{/* <p>{catComment}</p> */}
+		</div>
+		)
+	})
 
 	return (
 		<div>
@@ -88,7 +80,7 @@ export default function Profile({ currentUser, handleLogout }) {
 
 			<h3>{msg}</h3>
 
-			{/* {showCats} */}
+			{showCats}
 		</div>
 	)
 }
