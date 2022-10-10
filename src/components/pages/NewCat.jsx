@@ -1,22 +1,48 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import jwt_decode from 'jwt-decode'
 
 export default function NewCat(){
     const [ cat, setCat ] = useState({
         header: '',
         img_Url: '',
         content: '',
-        user: '',
+        userId: '',
     })
     const [errorMessage, setErrorMessage] = useState('')
-    const navigate = useNavigate()
 
+    useEffect(() => {
+        const getUser = async () => {
+            try {
+                const decodedoken = jwt_decode(localStorage.getItem('jwt'))
+
+
+                //Passed in the userid from the decoded token
+                // response.data["userId"] = decodedoken.id;
+                // console.log('response.data:', response.data);
+                // console.log('decodeoken.id', decodedoken.id);
+
+
+                setCat({...cat, userId: decodedoken.id})       
+            } catch(err) {
+                console.warn(err)
+                if (err.response) {
+                    setErrorMessage(err.response.data.message)
+                }                
+            }
+        }
+        getUser()
+    }, [])
+
+    const navigate = useNavigate()
+    console.log(cat)
     const handleSubmit = async e => {
         try{
             e.preventDefault()
             const response = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             // navigate back to cats
+            
             navigate('/feed')
         }catch(err) {
             console.warn(err)
