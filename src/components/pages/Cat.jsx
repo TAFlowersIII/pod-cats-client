@@ -20,6 +20,8 @@ export default function Cat({currentUser}) {
 
                 console.log(response.data)
                 setCat({...cat,
+                    header: '',
+                    content: '',
                     img_Url: response.data.url,
                     catId: response.data.id,
                     userId: decodedoken.id})
