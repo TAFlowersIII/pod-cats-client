@@ -47,13 +47,16 @@ export default function Cat({currentUser, setCurrentUser }) {
     const addFavorite = async e => {
         try {
             e.preventDefault()
+            const decodedoken = jwt_decode(localStorage.getItem('jwt'))
+            let emptyArray = [...currentUser.cats]
             await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             // console.log("the current user is: " + currentUser)
             // navigation not functional
-            const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats`)
-            console.log('@@@@@@@@@@', cats)
+            emptyArray.push(cat)
+            const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/${decodedoken.id}`)
+            console.log('@@@@@@@@@@', cats.data.user[0].cats)
             const thisUser = {...currentUser}
-            thisUser.cats = cats.data
+            thisUser.cats = emptyArray
             setCurrentUser(thisUser)
             console.log('#######', thisUser)
             console.log('%%%%%%%%%', currentUser)
