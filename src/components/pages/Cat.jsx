@@ -94,7 +94,9 @@ export default function Cat({currentUser, setCurrentUser }) {
                     id='header' 
                     value={cat.header}
                     placeholder="Mister Snuggles"
-                    onChange={e => setCat({...cat, header: e.target.value})}></input>
+                    onChange={e => setCat({...cat, header: e.target.value})}
+                    required
+                    ></input>
                 </div>
                 <div>
                     <label htmlFor='content'>Description:</label>
@@ -103,7 +105,9 @@ export default function Cat({currentUser, setCurrentUser }) {
                     id='content' 
                     value={cat.content}
                     placeholder='Describe your cat...' 
-                    onChange={e => setCat({...cat, content: e.target.value})}></input>
+                    onChange={e => setCat({...cat, content: e.target.value})}
+                    required
+                    ></input>
                 </div>
             <button type='submit'>Add to Profile</button>
             </form>
