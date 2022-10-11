@@ -6,7 +6,13 @@ import jwt_decode from 'jwt-decode'
 
 
 export default function Cat({currentUser, setCurrentUser }) {
-    const [cat, setCat] = useState({})
+    const [cat, setCat] = useState({
+        header: '',
+        content: '',
+        img_Url: '',
+        catId: '',
+        userId: '',
+    })
     const [errorMessage, setErrorMessage] = useState('')
 
     const { id } = useParams()
@@ -18,7 +24,7 @@ export default function Cat({currentUser, setCurrentUser }) {
                 const response = await axios.get(`https://api.thecatapi.com/v1/images/${id}`)
                 const decodedoken = jwt_decode(localStorage.getItem('jwt'))
 
-                console.log(response.data)
+                // console.log(response.data)
                 setCat({...cat,
                     header: '',
                     content: '',
@@ -47,19 +53,21 @@ export default function Cat({currentUser, setCurrentUser }) {
     const addFavorite = async e => {
         try {
             e.preventDefault()
+            //get userId
             const decodedoken = jwt_decode(localStorage.getItem('jwt'))
+            // make a copy of the cats array
             let emptyArray = [...currentUser.cats]
+            // post to the backend as req.body
             await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
-            // console.log("the current user is: " + currentUser)
-            // navigation not functional
+            // add cat to cats array
             emptyArray.push(cat)
+            // getting current user
             const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/${decodedoken.id}`)
-            console.log('@@@@@@@@@@', cats.data.user[0].cats)
+
             const thisUser = {...currentUser}
+            console.log(thisUser, "THIS EFFIN USER")
             thisUser.cats = emptyArray
             setCurrentUser(thisUser)
-            console.log('#######', thisUser)
-            console.log('%%%%%%%%%', currentUser)
             // setCurrentUser(...currentUser)
             navigate('/profile')
         } catch(err) {

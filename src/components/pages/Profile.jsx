@@ -53,8 +53,8 @@ export default function Profile({ currentUser, handleLogout }) {
 
 	},[])
 
-
-	const showCats = currentUser.cats.map(cat => {
+	const reversedCats = currentUser.cats.reverse()
+	const showCats = reversedCats.map(cat => {
 			// const catComment = cat.comments.map(comment =>{
 			// 	<p>{comment}</p>
 			// })
