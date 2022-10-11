@@ -22,8 +22,8 @@ export default function Feed() {
         }
         getCats()
     },[])
-    
-    const showCats = cats.map(cat => {
+    const reversedCats = cats.reverse()
+    const showCats = reversedCats.map(cat => {
         const catComment = cat.comments.map(comment =>{
             <p>{comment}</p>
         })
