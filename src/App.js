@@ -17,6 +17,7 @@ import Feed from './components/pages/Feed'
 import './App.css'
 import jwt_decode from 'jwt-decode'
 import NewCat from './components/pages/NewCat'
+import Account from './components/pages/Account'
 
 function App() {
   // the currently logged in user will be stored up here in state
@@ -102,7 +103,7 @@ function App() {
             element={<NewCat />}
           />
           <Route
-          />
+          path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout}/>}/>
         </Routes>
       </div>
     </Router>
