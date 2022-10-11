@@ -5,7 +5,7 @@ import { dblClick } from '@testing-library/user-event/dist/click'
 import jwt_decode from 'jwt-decode'
 
 
-export default function Cat({currentUser}) {
+export default function Cat({currentUser, setCurrentUser }) {
     const [cat, setCat] = useState({})
     const [errorMessage, setErrorMessage] = useState('')
 
@@ -50,6 +50,14 @@ export default function Cat({currentUser}) {
             await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
             // console.log("the current user is: " + currentUser)
             // navigation not functional
+            const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats`)
+            console.log('@@@@@@@@@@', cats)
+            const thisUser = {...currentUser}
+            thisUser.cats = cats.data
+            setCurrentUser(thisUser)
+            console.log('#######', thisUser)
+            console.log('%%%%%%%%%', currentUser)
+            // setCurrentUser(...currentUser)
             navigate('/profile')
         } catch(err) {
             console.warn(err)

@@ -59,12 +59,11 @@ export default function Profile({ currentUser, handleLogout }) {
 			// 	<p>{comment}</p>
 			// })
 			console.log(cat)
-			const url = `https://api.thecatapi.com/v1/images/${cat.catId}.jpg`
-			console.log(url)
+			// console.log(url)
 		return(
 		<div key={cat._id}>
 			<p>{cat.content}</p>
-			<img src={`https://api.thecatapi.com/v1/images/${cat.catId}.jpg`} />
+			<img src={cat.img_Url}/>
 			{/* <p>{catComment}</p> */}
 		</div>
 		)
