@@ -103,7 +103,7 @@ function App() {
             element={<NewCat />}
           />
           <Route
-          path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout}/>}/>
+          path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout} setCurrentUser={setCurrentUser}/>}/>
         </Routes>
       </div>
     </Router>
