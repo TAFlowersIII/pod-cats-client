@@ -54,6 +54,7 @@ export default function Cat({currentUser, setCurrentUser }) {
             // navigation not functional
             emptyArray.push(cat)
             const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/${decodedoken.id}`)
+            console.log('HELLO FRONT END',cats.data.user[0].cats)
             console.log('@@@@@@@@@@', cats.data.user[0].cats)
             const thisUser = {...currentUser}
             thisUser.cats = emptyArray
