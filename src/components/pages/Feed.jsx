@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from "react-router-dom";
 
 export default function Feed() {
 
@@ -29,7 +30,9 @@ export default function Feed() {
         })
         return(
         <div key={cat._id}>
-            <img src={cat.img_Url} />
+            <Link to={`/cats/id/${cat.catId}`}>
+                <img src={cat.img_Url} />
+            </Link>
             <p>{catComment}</p>
         </div>
         )
