@@ -89,7 +89,7 @@ function App() {
 
           <Route
             path="/cats/id/:id"
-            element={<Cat />}
+            element={<Cat currentUser={currentUser} setCurrentUser={setCurrentUser}/>}
           />
 
           <Route

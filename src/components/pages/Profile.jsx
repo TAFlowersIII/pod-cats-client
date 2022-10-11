@@ -59,12 +59,10 @@ export default function Profile({ currentUser, handleLogout }) {
 			// 	<p>{comment}</p>
 			// })
 			console.log(cat)
-			const url = cat.img_Url
-			console.log(url)
 		return(
 		<div key={cat._id}>
 			<p>{cat.content}</p>
-			<img src={cat.img_Url} />
+			<img src={cat.img_Url}/>
 			{/* <p>{catComment}</p> */}
 		</div>
 		)
