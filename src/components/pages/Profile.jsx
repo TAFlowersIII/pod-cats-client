@@ -59,7 +59,6 @@ export default function Profile({ currentUser, handleLogout }) {
 			// 	<p>{comment}</p>
 			// })
 			console.log(cat)
-			// console.log(url)
 		return(
 		<div key={cat._id}>
 			<p>{cat.content}</p>
