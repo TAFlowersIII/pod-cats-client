@@ -25,15 +25,19 @@ export default function Feed() {
     },[])
     const reversedCats = cats.reverse()
     const showCats = reversedCats.map(cat => {
-        const catComment = cat.comments.map(comment =>{
-            <p>{comment}</p>
-        })
+        // const catComment = cat.comments.map(comment =>{
+        //     <p>{comment}</p>
+        // })
         return(
         <div key={cat._id}>
+            <h3>{cat.header}</h3>
             <Link to={`/cats/id/${cat.catId}`}>
                 <img src={cat.img_Url} />
             </Link>
-            <p>{catComment}</p>
+            <p>{cat.content}</p>
+            <br></br>
+            <br></br>
+            {/* <p>{catComment}</p> */}
         </div>
         )
     })
