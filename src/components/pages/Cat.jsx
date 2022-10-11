@@ -17,10 +17,10 @@ export default function Cat({currentUser}) {
             try {
                 const response = await axios.get(`https://api.thecatapi.com/v1/images/${id}`)
                 const decodedoken = jwt_decode(localStorage.getItem('jwt'))
-
+                // console.log(currentUser)
                 console.log(response.data)
                 setCat({...cat,
-                    header: '',
+                    header: currentUser.name,
                     content: '',
                     img_Url: response.data.url,
                     catId: response.data.id,

@@ -29,7 +29,9 @@ export default function Feed() {
         })
         return(
         <div key={cat._id}>
+            <h3>{cat.header}</h3>
             <img src={cat.img_Url} />
+            <p>{cat.content}</p>
             <p>{catComment}</p>
         </div>
         )
