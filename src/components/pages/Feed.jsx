@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from "react-router-dom";
 
 export default function Feed() {
 
@@ -24,13 +25,19 @@ export default function Feed() {
     },[])
     const reversedCats = cats.reverse()
     const showCats = reversedCats.map(cat => {
-        const catComment = cat.comments.map(comment =>{
-            <p>{comment}</p>
-        })
+        // const catComment = cat.comments.map(comment =>{
+        //     <p>{comment}</p>
+        // })
         return(
         <div key={cat._id}>
-            <img src={cat.img_Url} />
-            <p>{catComment}</p>
+            <h3>{cat.header}</h3>
+            <Link to={`/cats/id/${cat.catId}`}>
+                <img src={cat.img_Url} />
+            </Link>
+            <p>{cat.content}</p>
+            <br></br>
+            <br></br>
+            {/* <p>{catComment}</p> */}
         </div>
         )
     })
