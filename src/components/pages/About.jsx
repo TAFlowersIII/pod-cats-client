@@ -44,11 +44,6 @@ export default function About() {
                          <h4>Thomas is a grumpy old man on the outside, but a lil cutie patootie on the inside. He enjoys weird and obscure music, long bike rides through nature, deep talks about philosophy/the state of humanity, and immature humor- although he pretends to enjoy immature humor ironically. He is too hip and cool for his own damn good.</h4>
                     </div>
                </div>
-
-               <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
-               <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
-               <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />
-               <img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' />
           </div>
      )
 }
