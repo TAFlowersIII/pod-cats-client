@@ -33,7 +33,7 @@ export default function Navbar({ currentUser, handleLogout }) {
 
 	return (
 		// <div className='container'>
-		<nav className='navbar navbar-expand-xl bg-dark'>
+		<nav className='navbar fixed-top navbar-expand-xl bg-dark'>
 			<div className='container'>
 				<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: 'white'}}>Cat Menu</a>
 				<li className="nav-item dropdown" >
