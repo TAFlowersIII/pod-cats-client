@@ -4,17 +4,21 @@ export default function Navbar({ currentUser, handleLogout }) {
 	 const loggedIn = (
 		<section>
 			{/* if the user is logged in... */}
-			<Link to="/">
-				<span onClick={handleLogout}>Logout</span>
+			<Link to="/cats/new">
+				Post your 🐾
 			</Link>
 			<> | </>
 			<Link to="/profile">
 				Profile
 			</Link>
 			<> | </>
-			<Link to="/cats/new">
-				Post your 🐾
+			<Link to="/">
+				<span onClick={handleLogout}>Logout</span>
 			</Link>
+			<> | </>
+			
+			
+			
 		</section>
 	 )
 
@@ -44,10 +48,12 @@ export default function Navbar({ currentUser, handleLogout }) {
 					</ul>
 			</div>
 			{/* user always sees this section */}
-			<div>
+			<div  style={{color: 'white'}}>
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li className='nav-item'> {' | '}<Link to="/"> Homepage</Link></li>
+				<> |  </>
 				<li className='nav-item'>{currentUser ? loggedIn : loggedOut}</li>
-				<li className='nav-item'> {' | '}<Link to="/"> Homepage </Link></li>
+				
 				<li className="nav-item dropdown" >
 				
 				</li>
