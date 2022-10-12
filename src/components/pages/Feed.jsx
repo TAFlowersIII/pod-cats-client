@@ -11,6 +11,7 @@ export default function Feed() {
         const getCats = async () => {
             try{
                 const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats`)
+                console.log(response.data)
                 setCats(response.data)
             }catch(err){
                 console.warn(err)
@@ -34,7 +35,8 @@ export default function Feed() {
             <Link to={`/cats/id/${cat.catId}`}>
                 <img src={cat.img_Url} />
             </Link>
-            <p>{cat.content}</p>
+            <p>Posted by: {cat.user[0].name}</p>
+            <p>Description: {cat.content}</p>
             <br></br>
             <br></br>
             {/* <p>{catComment}</p> */}
