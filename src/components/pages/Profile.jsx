@@ -94,9 +94,9 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			// })
 			console.log('MAP OUT CATS',cat)
 		return(
-		<div key={cat._id} className='flex items-center flex-col justify-center '>
+		<div key={cat._id} className='flex items-center flex-col justify-center'>
 			<h3>{cat.header}</h3>
-			<img className='rounded-3xl' src={cat.img_Url} alt="a cute kitty"/>
+			<img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty"/>
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
 			{/* <br/> */}
@@ -109,11 +109,14 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 
 	return (
 		<div>
-			<h1>Hello, {currentUser.name}</h1>
+			<h1 className='text-3xl font-medium font-serif'>Hello, {currentUser.name}!</h1>
 
-			<p>your email is {currentUser.email}</p>
+			{/* <p>your email is {currentUser.email}</p> */}
 
-			<h2>Here is the secret message that is only availible to users of User App:</h2>
+			{/* <h2>Here is the secret message that is only availible to users of User App:</h2> */}
+			<br></br>
+			<br></br>
+			
 
 			<h3>{msg}</h3>
 

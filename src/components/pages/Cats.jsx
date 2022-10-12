@@ -23,7 +23,7 @@ export default function Cats() {
         return(
             <div key={cat.id} className='flex items-center flex-col justify-center'>
                 <Link to={`/cats/id/${cat.id}`}>
-                <img className='rounded-3xl'  width="500px" src={cat.url} alt="a very cute cat"/>
+                <img className='rounded-3xl border-4 border-black'  width="500px" src={cat.url} alt="a very cute cat"/>
                 </Link>
                 <br></br>
             </div>
