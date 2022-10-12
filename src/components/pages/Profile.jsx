@@ -96,22 +96,27 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 		return(
 		<div key={cat._id} className='flex items-center flex-col justify-center'>
 			<h3>{cat.header}</h3>
-			<img src={cat.img_Url} alt="a cute kitty"/>
+			<img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty"/>
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
-			<br/>
-			<button id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
+			{/* <br/> */}
+			<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
+			<br></br>
+			<br></br>
 		</div>
 		)
 	})
 
 	return (
 		<div>
-			<h1>Hello, {currentUser.name}</h1>
+			<h1 className='text-3xl font-medium font-serif'>Hello, {currentUser.name}!</h1>
 
-			<p>your email is {currentUser.email}</p>
+			{/* <p>your email is {currentUser.email}</p> */}
 
-			<h2>Here is the secret message that is only availible to users of User App:</h2>
+			{/* <h2>Here is the secret message that is only availible to users of User App:</h2> */}
+			<br></br>
+			<br></br>
+			
 
 			<h3>{msg}</h3>
 
