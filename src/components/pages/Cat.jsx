@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
@@ -126,7 +126,14 @@ export default function Cat({currentUser, setCurrentUser }) {
         </div> 
     )
     const loginMessage = (
-        <h1 className='text-3xl font-bold'>🐾 Log in to get your paws on this cat's details! 🐾</h1>
+        <div>
+            <h1 className='text-3xl font-bold'>🐾 Log in to get your paws on this cat's details! 🐾</h1>
+            <Link to='/login' >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    Log in
+                </button>
+            </Link>
+        </div>
     )
     return (
         <div className='flex items-center flex-col justify-center'>
