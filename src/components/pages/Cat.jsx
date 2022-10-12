@@ -12,6 +12,7 @@ export default function Cat({currentUser, setCurrentUser }) {
         img_Url: '',
         catId: '',
         userId: '',
+        _id: 'something'
     })
     const [errorMessage, setErrorMessage] = useState('')
 
@@ -30,7 +31,8 @@ export default function Cat({currentUser, setCurrentUser }) {
                     content: '',
                     img_Url: response.data.url,
                     catId: response.data.id,
-                    userId: decodedoken.id})
+                    userId: decodedoken.id,
+                })
                 //Passed in the userid from the decoded token
                 // response.data["userId"] = decodedoken.id;
                 // console.log('response.data:', response.data);
@@ -58,9 +60,25 @@ export default function Cat({currentUser, setCurrentUser }) {
             // make a copy of the cats array
             let emptyArray = [...currentUser.cats]
             // post to the backend as req.body
-            await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
-            // add cat to cats array
-            emptyArray.push(cat)
+            // const catId = await axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat)
+            axios.post(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/new`, cat).then(catId=>{
+                    console.log('CAT IDIDIDIDIDI', catId.data.catId)
+                    // add cat to cats array
+                    const something = {
+                    header: cat.header,
+                    content: cat.content,
+                    img_Url: cat.img_Url,
+                    catId: cat.catId,
+                    userId: cat.userId,
+                    _id: catId.data.catId}
+                    console.log('NEWOBJECT', something)
+                    setCat(something)
+                    // console.log(''cat)
+                    console.log('THIS IS CAT STATE',cat)
+                    emptyArray.push(something)
+            })
+            
+            
             // getting current user
             const cats = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/${decodedoken.id}`)
 
@@ -69,7 +87,7 @@ export default function Cat({currentUser, setCurrentUser }) {
             thisUser.cats = emptyArray
             setCurrentUser(thisUser)
             // setCurrentUser(...currentUser)
-            navigate('/profile')
+            navigate('/feed')
         } catch(err) {
             console.warn(err)
             if (err.response) {
@@ -109,6 +127,7 @@ export default function Cat({currentUser, setCurrentUser }) {
                     required
                     ></input>
                 </div>
+                <input hidden></input>
             <button type='submit'>Add to Profile</button>
             </form>
             {/* <button onClick={addFavorite}>Add to profile</button> */}
