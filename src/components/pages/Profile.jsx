@@ -96,7 +96,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 		return(
 		<div key={cat._id} className='flex items-center flex-col justify-center'>
 			<h3>{cat.header}</h3>
-			<img src={cat.img_Url}/>
+			<img src={cat.img_Url} alt="a cute kitty"/>
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
 			<br/>
