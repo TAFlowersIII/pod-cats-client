@@ -6,6 +6,20 @@ img {
   width: 500px;
 }
 
+.rightCat {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+}
+
+.leftCat {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 250px;
+}
+
 body {
   background-image: url('https://img5.goodfon.com/wallpaper/nbig/c/56/nekachestvennye-oboi-iavnye-artefakty-uvelichennye-do-bolshe.jpg');
   background-size: cover;
