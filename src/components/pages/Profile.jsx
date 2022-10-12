@@ -94,9 +94,9 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			// })
 			console.log('MAP OUT CATS',cat)
 		return(
-		<div key={cat._id} className='flex items-center flex-col justify-center'>
+		<div key={cat._id} className='flex items-center flex-col justify-center '>
 			<h3>{cat.header}</h3>
-			<img src={cat.img_Url} alt="a cute kitty"/>
+			<img className='rounded-3xl' src={cat.img_Url} alt="a cute kitty"/>
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
 			<br/>
