@@ -100,7 +100,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
 			<br/>
-			<button id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
+			<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
 		</div>
 		)
 	})
