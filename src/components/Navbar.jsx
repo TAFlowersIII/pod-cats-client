@@ -37,7 +37,7 @@ export default function Navbar({ currentUser, handleLogout }) {
 			<div className='container'>
 				<a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style={{color: 'white'}}>Cat Menu</a>
 				<li className="nav-item dropdown" >
-					<ul class="dropdown-menu">
+					<ul className="dropdown-menu">
 						<li className='dropdown-item'><Link to="/cats/new">Post your 🐾</Link></li>
 						<li className='dropdown-item'><Link to="/cats">Random Cats</Link></li>
 						<li className='dropdown-item'><Link to="/feed">Cat Feed</Link></li>
@@ -45,7 +45,7 @@ export default function Navbar({ currentUser, handleLogout }) {
 					</ul>
 				</li>
 				<div  style={{color: 'white'}}>
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 						<li className='nav-item'> {' | '}<Link to="/"> Homepage</Link>{' | '}</li>
 						
 						<li className='nav-item'>{currentUser ? loggedIn : loggedOut}</li>
