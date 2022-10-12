@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Welcome() {
 	return (
 		<div className='flex items-center flex-col justify-center' >
-			<h1>Welcome To Pod Cats!</h1>
+			<h1 className='text-3xl font-medium font-serif mt-20'>Welcome To Pod Cats!</h1>
 			<h3>Browse some cats, and save your favorites!</h3>
 		<br></br>
 			<img className='rounded-3xl border-4 border-black' 

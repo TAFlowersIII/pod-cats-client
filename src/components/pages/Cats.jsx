@@ -31,7 +31,7 @@ export default function Cats() {
     })
     return(
         <div>
-            <h1>cats</h1>
+            <h1 className="text-3xl font-medium font-serif mt-20 mb-12">Here's some cats!</h1>
             {showCats}
             <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
             <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />

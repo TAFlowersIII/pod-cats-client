@@ -45,7 +45,8 @@ export default function Feed() {
     })
 
     return (
-        <div>
+        <div className='mt-20'>
+            <p className='m-10 text-3xl font-medium font-serif'>The Cat Feed</p>
             {showCats}
             <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
             <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />

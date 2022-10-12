@@ -49,7 +49,7 @@ export default function Login({ currentUser, setCurrentUser }) {
 		<div className='md:flex md:justify-center m-10'>
 
 			<p>{msg}</p>
-			<div className="w-full max-w-xs object-center">
+			<div className="w-full max-w-xs object-center mt-20">
 				<form 
 					onSubmit={handleSubmit}
 					className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
