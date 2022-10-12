@@ -52,37 +52,64 @@ export default function Register({ currentUser, setCurrentUser }) {
 			<h1>Register for an account:</h1>
 
 			<p>{msg}</p>
+			<div className="w-full max-w-xs object-center">
 
-			<form onSubmit={handleSubmit}>
-				<label htmlFor='name'>Name:</label>
-				<input 
-					type="text"
-					id="name"
-					placeholder='your username...'
-					onChange={e => setName(e.target.value)}
-					value={name}
-				/>
+				<form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+					<div className="mb-4">
+						<label  
+							className="block text-gray-700 text-sm font-bold mb-2" 
+							htmlFor='name'
+						>
+							Name:
+						</label>
+						<input 
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							type="text"
+							id="name"
+							placeholder='your username...'
+							onChange={e => setName(e.target.value)}
+							value={name}
+						/>
+					</div>
 
-				<label htmlFor='email'>Email:</label>
-				<input 
-					type="email"
-					id="email"
-					placeholder='your email...'
-					onChange={e => setEmail(e.target.value)}
-					value={email}
-				/>
+					<div className='mb-4'>
+						<label
+							className="block text-gray-700 text-sm font-bold mb-2" 
+							htmlFor='email'
+							>
+							Email:
+						</label>
 
-				<label htmlFor='password'>Password:</label>
-				<input 
-					type="password"
-					id="password"
-					placeholder='password...'
-					onChange={e => setPassword(e.target.value)}
-					value={password}
-				/>
+						<input 
+							className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+							type="email"
+							id="email"
+							placeholder='your email...'
+							onChange={e => setEmail(e.target.value)}
+							value={email}
+							/>
+					</div>
 
-				<button type="submit">Register</button>
-			</form>
+					<div className='mb-4'>
+						<label
+							className="block text-gray-700 text-sm font-bold mb-2"
+							htmlFor='password'
+						>
+							Password:
+						</label>
+						<input 
+							className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+							type="password"
+							id="password"
+							placeholder='password...'
+							onChange={e => setPassword(e.target.value)}
+							value={password}
+						/>
+					</div>
+
+					<button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Register</button>
+				</form>
+			</div>
 		</div>
 	)
 }

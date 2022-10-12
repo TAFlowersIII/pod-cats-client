@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
-import { Navigate } from 'react-router-dom'
+import { Navigate, Link } from 'react-router-dom'
 
 export default function Login({ currentUser, setCurrentUser }) {
 	// state for the controlled form
@@ -50,28 +50,51 @@ export default function Login({ currentUser, setCurrentUser }) {
 			<h1>Login to Your Account:</h1>
 
 			<p>{msg}</p>
+			<div className="w-full max-w-xs object-center">
+				<form 
+					onSubmit={handleSubmit}
+					className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+				>
+					<label 
+						className="block text-gray-700 text-sm font-bold mb-2" 
+						htmlFor='email'
+					>
+						Email:
+					</label>
+					<input 
+						className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						type="email"
+						id="email"
+						placeholder='your email...'
+						onChange={e => setEmail(e.target.value)}
+						value={email}
+					/>
 
-			<form onSubmit={handleSubmit}>
-				<label htmlFor='email'>Email:</label>
-				<input 
-					type="email"
-					id="email"
-					placeholder='your email...'
-					onChange={e => setEmail(e.target.value)}
-					value={email}
-				/>
+					<label 
+						className="block text-gray-700 text-sm font-bold mb-2"
+						htmlFor='password'
+					>
+						Password:
+					</label>
+					
+					<input 
+						className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+						type="password"
+						id="password"
+						placeholder='password...'
+						onChange={e => setPassword(e.target.value)}
+						value={password}
+					/>
 
-				<label htmlFor='password'>Password:</label>
-				<input 
-					type="password"
-					id="password"
-					placeholder='password...'
-					onChange={e => setPassword(e.target.value)}
-					value={password}
-				/>
+					<button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Login</button>
 
-				<button type="submit">Login</button>
-			</form>
+				</form>
+				<p>Don't have an account?</p>
+
+				<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> 
+					<Link to='/register'>Register here!</Link>
+				</button>
+			</div>
 		</div>
 	)
 }
