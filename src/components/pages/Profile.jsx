@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios'
+import jwt_decode from 'jwt-decode'
 
 export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 	// state for the secret message (aka user privilaged data)
@@ -22,6 +23,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 						'Authorization': token
 					}
 				}
+				
 				// hit the auth locked endpoint
 				const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api-v1/users/auth-locked`, options)
 				// example POST with auth headers (options are always last argument)
@@ -60,8 +62,14 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 	},[])
 	const handleDelete = async (id) => {
 		try{
-			//send delete to backend
-			await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/id/${id}`)
+			const token = localStorage.getItem('jwt')
+			//decoding jwt to send user ID to back end (decoded.id)
+			const decoded = jwt_decode(token)
+			let userId = decoded.id
+			let catId = id
+			//send delete to backend: line 71 to User, line 72 to Cat
+			await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/id`, {data: {userId, id} } )
+			await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/cat`, {data: {id} } )
 			//find the index where ids match
 			const findIndex = currentUser.cats.findIndex(cat => cat._id === id)
 			let newCatArray = [...currentUser.cats]
