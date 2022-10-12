@@ -59,14 +59,23 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
 		}
     }
     return(
-        <div>
-            <br></br>
-			<br></br>
-            <h1 className='text-3xl font-medium font-serif mt-20' >Account Settings</h1>
-            <div style={{display: 'inline-block'}}>
-            <form onSubmit={updateAccount}>
-                <label htmlFor='name'>Name:</label>
+        <div className='m-10'>
+            <div className="w-full mx-auto max-w-xs object-center mt-20">
+                <form 
+                    onSubmit={updateAccount}
+                    className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+                >
+
+                <h1 className='text-3xl font-medium font-serif mb-2'>Account Settings</h1>
+
+                <label 
+                    htmlFor='name'
+                    className="block text-gray-700 text-sm font-bold mb-2" 
+                >
+                    Name:
+                </label>
                     <input 
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3 focus:outline-none focus:shadow-outline"
                         type="text"
                         id="name"
                         placeholder={`${decodedoken.name}`}
@@ -74,8 +83,15 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
                         value={name}
                         required/>
 
-                    <label htmlFor='email'>Email:</label>
+                    <label 
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor='email'
+                    >
+                        Email:
+                    </label>
+                    
                     <input 
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight mb-3 focus:outline-none focus:shadow-outline"
                         type="email"
                         id="email"
                         placeholder={`${decodedoken.email}`}
@@ -83,18 +99,30 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
                         value={email}
                     required/>
 
-                    <label htmlFor='password'>Password:</label>
+                    <label 
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor='password'
+                    >
+                        Current Password:
+                    </label>
                     <input 
+                        className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                         type="password"
                         id="password"
                         placeholder='*****'
                         onChange={e => setPassword(e.target.value)}
                         value={password}
                         required/>
-                    <label htmlFor='password'>New Password:</label>
+                    <label
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                        htmlFor='newPassword'
+                    >
+                        New Password:
+                    </label>
                     <input 
+                        className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                         type="password"
-                        id="password"
+                        id="newPassword"
                         placeholder='*****'
                         onChange={e => setNewPassword(e.target.value)}
                         value={newPassword}
@@ -102,7 +130,7 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type='submit'>Submit Changes</button>
             </form>
             </div>
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={deleteUser}>Delete Account</button>
+            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" onClick={deleteUser}>Delete Account</button>
         </div>
     )
 }
