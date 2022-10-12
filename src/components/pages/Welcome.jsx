@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 
 export default function Welcome() {
 	return (
-		<div>
+		<div className='flex items-center flex-col justify-center' >
 			<h1>Welcome To Pod Cats!</h1>
 			<h3>Browse some cats, and save your favorites!</h3>
 		<br></br>
-			<img 
+			<img className='rounded-3xl border-4 border-black' 
 			src="https://coed.com/wp-content/uploads/2018/01/shutterstock_1031589889.jpg"
 			id="welcome_photo"
 			alt="a picture of a smiling kitten"
