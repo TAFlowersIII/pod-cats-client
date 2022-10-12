@@ -51,6 +51,11 @@ img {
   width: 150px;
 }
 
+.devCats {
+  width: 500px;
+  height: 350px; 
+}
+
 body {
   background-color: rgb(136, 233, 200);
 }
