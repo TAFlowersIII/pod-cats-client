@@ -46,15 +46,15 @@ export default function Login({ currentUser, setCurrentUser }) {
 	}
 
 	return (
-		<div>
-			<h1>Login to Your Account:</h1>
+		<div className='md:flex md:justify-center m-10'>
 
 			<p>{msg}</p>
 			<div className="w-full max-w-xs object-center">
 				<form 
 					onSubmit={handleSubmit}
 					className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-				>
+					>
+					<p className='text-3xl font-bold mb-10'>Welcome back!</p>
 					<label 
 						className="block text-gray-700 text-sm font-bold mb-2" 
 						htmlFor='email'
