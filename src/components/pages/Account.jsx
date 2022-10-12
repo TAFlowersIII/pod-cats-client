@@ -60,9 +60,10 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
     }
     return(
         <div>
-            <h1>Account Settings</h1>
+            <br></br>
+			<br></br>
+            <h1 className='text-3xl font-medium font-serif mt-20' >Account Settings</h1>
             <div style={{display: 'inline-block'}}>
-                <h3>Update Account</h3>
             <form onSubmit={updateAccount}>
                 <label htmlFor='name'>Name:</label>
                     <input 
@@ -98,10 +99,10 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
                         onChange={e => setNewPassword(e.target.value)}
                         value={newPassword}
                         required/>
-                    <button type='submit'>Submit Changes</button>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type='submit'>Submit Changes</button>
             </form>
             </div>
-            <button onClick={deleteUser}>Delete Account</button>
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" onClick={deleteUser}>Delete Account</button>
         </div>
     )
 }
