@@ -15,7 +15,8 @@ export default function Welcome() {
 				alt="a picture of a smiling kitten"
 				></img>
 			<br></br>
-				<p>“Owners of dogs will have noticed that, if you provide them with food and water and shelter and affection, they will think you are God. Whereas owners of cats are compelled to realize that, if you provide them with food and water and affection, they draw the conclusion that they are God.” – Christopher Hitchens</p>
+				<p>“Owners of dogs will have noticed that, if you provide them with food and water and shelter and affection, they will think you are God. Whereas owners of cats are compelled to realize that, if you provide them with food and water and affection, they draw the conclusion that they are God.”
+					<br></br> – Christopher Hitchens</p>
 
 				<Link to={"./Login"}>
 					<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 mt-5 rounded-full">Click To Log In</button>
