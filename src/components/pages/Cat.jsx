@@ -84,7 +84,7 @@ export default function Cat({currentUser, setCurrentUser }) {
     const catPic = (
         <div>
             <h1>lil cat 🐈‍⬛</h1>
-            <img src={cat.img_Url} alt="a cute kitty" />
+            <img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty" />
             
             <form onSubmit ={addFavorite}>
             
@@ -120,7 +120,7 @@ export default function Cat({currentUser, setCurrentUser }) {
         <h1>🐾 Log in to get your paws on this cat's details! 🐾</h1>
     )
     return (
-        <div>
+        <div className='flex items-center flex-col justify-center'>
             {currentUser ? catPic : loginMessage}            
         </div>
     )
