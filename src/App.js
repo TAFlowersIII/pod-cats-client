@@ -108,6 +108,12 @@ function App() {
           <Route
           path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout} setCurrentUser={setCurrentUser}/>}/>
         </Routes>
+        <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+        <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
+        <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />
+        <img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' />
+        <img className='leftTopCat' src='https://i.imgur.com/UYWkQb9.png' />
+        <img className='rightTopCat' src='https://i.imgur.com/IWZXtw8.png' />        
       </div>
     </Router>
   );
