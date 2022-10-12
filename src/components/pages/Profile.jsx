@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 import jwt_decode from 'jwt-decode'
 
@@ -109,14 +109,22 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 
 	return (
 		<div>
+			<br></br>
+			<br></br>
 			<h1 className='text-3xl font-medium font-serif mt-20'>Hello, {currentUser.name}!</h1>
-
-			{/* <p>your email is {currentUser.email}</p> */}
-
-			{/* <h2>Here is the secret message that is only availible to users of User App:</h2> */}
+			<p> Thank you for signing up. Enjoy sharing your cat(s) with other cat enthusiasts.</p>
 			<br></br>
 			<br></br>
-			
+			<Link to='/profile/account' >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    Account Settings
+                </button>
+            </Link>
+			<Link to='/cats' >
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    Click Meow to Add Cats!
+                </button>
+            </Link>
 
 			<h3>{msg}</h3>
 
