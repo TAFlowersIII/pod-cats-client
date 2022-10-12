@@ -33,6 +33,8 @@ export default function Cats() {
         <div>
             <h1>cats</h1>
             {showCats}
+            <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
         </div>
     )
 }

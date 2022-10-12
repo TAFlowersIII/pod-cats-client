@@ -111,6 +111,8 @@ export default function NewCat(){
                     <button type='submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Add to Collection</button>
                 </form>
             </div>
+            <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
         </div>
     )
 }

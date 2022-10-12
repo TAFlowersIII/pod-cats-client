@@ -103,6 +103,9 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
             </div>
             <button onClick={deleteUser}>Delete Account</button>
 
+            <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
+
         </div>
     )
 }

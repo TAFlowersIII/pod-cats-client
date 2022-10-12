@@ -95,6 +95,8 @@ export default function Login({ currentUser, setCurrentUser }) {
 					<Link to='/register'>Register here!</Link>
 				</button>
 			</div>
+			<img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
 		</div>
 	)
 }
