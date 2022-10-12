@@ -19,11 +19,6 @@ export default function Welcome() {
 				<button>Click To Log In</button>
 			</Link>
 
-			<img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
-            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
-			<img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />
-			<img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' />
-
 		</div>
 	)
 }

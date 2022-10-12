@@ -129,10 +129,6 @@ export default function NewCat({currentUser}){
         <div className='md:flex md:justify-center m-10'>
             <p>{errorMessage}</p>
             {currentUser ? catForm : loginMessage}
-            <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
-            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
-            <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />
-            <img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' />
         </div>
     )
 }
