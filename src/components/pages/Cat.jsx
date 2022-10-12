@@ -82,42 +82,51 @@ export default function Cat({currentUser, setCurrentUser }) {
     }
 
     const catPic = (
-        <div>
-            <h1>lil cat 🐈‍⬛</h1>
+        <div className='flex flex-col justify-center'>
+            <h1 className='text-3xl font-bold m-2'>lil cat 🐈‍⬛</h1>
+            
             <img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty" />
-            
-            <form onSubmit ={addFavorite}>
-            
-            <div>
-                <label htmlFor='header'>Your cat's name:</label>
-                <input 
-                    type='text' 
-                    id='header' 
-                    value={cat.header}
-                    placeholder="Mister Snuggles"
-                    onChange={e => setCat({...cat, header: e.target.value})}
-                    required
-                ></input>
-            </div>
 
-            <div>
-                <label htmlFor='content'>Description:</label>
-                <input 
-                    type='text' 
-                    id='content' 
-                    value={cat.content}
-                    placeholder='Describe your cat...' 
-                    onChange={e => setCat({...cat, content: e.target.value})}
-                    required
-                ></input>
-            </div>
-                <input hidden></input>
-            <button type='submit'>Add to Profile</button>
+            <form 
+                onSubmit ={addFavorite}
+                className="w-full max-w-sm flex flex-col justify-center items-center"
+            >
+                <div className='flex items-center py-2'>
+                    <div className='border-b border-teal-500 m-2'>
+                        <label htmlFor='header'>I dub thee:</label>
+                        <input 
+                            className='bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2'
+                            type='text' 
+                            id='header' 
+                            value={cat.header}
+                            placeholder="Mister Snuggles"
+                            onChange={e => setCat({...cat, header: e.target.value})}
+                            required
+                        ></input>
+                    </div>
+
+                    <div className='border-b border-teal-500 '>
+                        <label htmlFor='content'>Description:</label>
+                        <input 
+                            className=' bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2'
+                            type='text' 
+                            id='content' 
+                            value={cat.content}
+                            placeholder='...ZoomBoi...' 
+                            onChange={e => setCat({...cat, content: e.target.value})}
+                            required
+                        ></input>
+                    </div>
+                        <input hidden></input>
+                    <button
+                        className='flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded' 
+                        type='submit'>Add to Profile</button>
+                </div>
             </form>
-        </div>
+        </div> 
     )
     const loginMessage = (
-        <h1>🐾 Log in to get your paws on this cat's details! 🐾</h1>
+        <h1 className='text-3xl font-bold'>🐾 Log in to get your paws on this cat's details! 🐾</h1>
     )
     return (
         <div className='flex items-center flex-col justify-center'>
