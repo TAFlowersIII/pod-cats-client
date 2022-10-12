@@ -62,11 +62,12 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 	},[])
 	const handleDelete = async (id) => {
 		try{
+			console.log(id)
 			const token = localStorage.getItem('jwt')
 			//decoding jwt to send user ID to back end (decoded.id)
 			const decoded = jwt_decode(token)
 			let userId = decoded.id
-			let catId = id
+			// let catId = id
 			//send delete to backend: line 71 to User, line 72 to Cat
 			await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/id`, {data: {userId, id} } )
 			await axios.delete(`${process.env.REACT_APP_SERVER_URL}/api-v1/cats/cat`, {data: {id} } )
@@ -91,7 +92,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			// const catComment = cat.comments.map(comment =>{
 			// 	<p>{comment}</p>
 			// })
-			// console.log(cat)
+			console.log('MAP OUT CATS',cat)
 		return(
 		<div key={cat._id}>
 			<h3>{cat.header}</h3>
