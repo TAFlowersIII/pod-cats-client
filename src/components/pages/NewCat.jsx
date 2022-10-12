@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import jwt_decode from 'jwt-decode'
 
-export default function NewCat(){
+export default function NewCat({currentUser}){
     const [ cat, setCat ] = useState({
         header: '',
         img_Url: '',
@@ -52,7 +52,7 @@ export default function NewCat(){
         }
     }
 
-    return(
+    const catForm = (
         <div className='md:flex md:justify-center m-10'>
             <p>{errorMessage}</p>
 
@@ -111,6 +111,24 @@ export default function NewCat(){
                     <button type='submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Add to Collection</button>
                 </form>
             </div>
+        </div>
+    )
+
+    const loginMessage = (
+        <div>
+            <p>Log in to add your cat!</p>
+            <Link to='/login'>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                    Log in
+                </button>
+            </Link>
+        </div>
+    )
+
+    return(
+        <div className='md:flex md:justify-center m-10'>
+            <p>{errorMessage}</p>
+            {currentUser ? catForm : loginMessage}
             <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
             <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
             <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />

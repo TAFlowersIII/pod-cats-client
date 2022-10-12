@@ -100,7 +100,7 @@ function App() {
 
           <Route
             path='/cats/new'
-            element={<NewCat />}
+            element={<NewCat currentUser={currentUser} />}
           />
           <Route
           path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout} setCurrentUser={setCurrentUser}/>}/>
