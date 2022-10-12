@@ -52,9 +52,7 @@ img {
 }
 
 body {
-  background-image: url('https://img5.goodfon.com/wallpaper/nbig/c/56/nekachestvennye-oboi-iavnye-artefakty-uvelichennye-do-bolshe.jpg');
-  background-size: cover;
-  /* background-repeat: no-repeat; */
+  background-color: rgb(136, 233, 200);
 }
 
 .App-logo {
