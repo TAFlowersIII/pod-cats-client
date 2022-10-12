@@ -23,7 +23,7 @@ img {
 .rightLongCat {
   position: fixed;
   right: 0;
-  bottom: 30%;
+  bottom: 25%;
   width: 200px;
   height: 500px;
 }
@@ -31,9 +31,24 @@ img {
 .leftLongCat {
   position: fixed;
   left: 0;
-  bottom: 30%;
+  bottom: 25%;
   width: 200px;
   height: 500px;
+}
+
+.leftTopCat {
+  position: fixed;
+  left: 0;
+  bottom: 80%;
+  width: 150px;
+  
+}
+
+.rightTopCat {
+  position: fixed;
+  right: 0;
+  bottom: 80%;
+  width: 150px;
 }
 
 body {
