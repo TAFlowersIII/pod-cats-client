@@ -109,7 +109,7 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 
 	return (
 		<div>
-			<h1 className='text-3xl font-medium font-serif'>Hello, {currentUser.name}!</h1>
+			<h1 className='text-3xl font-medium font-serif mt-20'>Hello, {currentUser.name}!</h1>
 
 			{/* <p>your email is {currentUser.email}</p> */}
 

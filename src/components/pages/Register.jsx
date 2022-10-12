@@ -48,7 +48,7 @@ export default function Register({ currentUser, setCurrentUser }) {
 	}
 
 	return (
-		<div className='md:flex md:justify-center m-10'>
+		<div className='md:flex md:justify-center m-10 mt-20'>
 			<p>{msg}</p>
 			<div className="w-full max-w-xs">
 

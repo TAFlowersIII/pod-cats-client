@@ -83,9 +83,9 @@ export default function Cat({currentUser, setCurrentUser }) {
 
     const catPic = (
         <div className='flex flex-col justify-center'>
-            <h1 className='text-3xl font-bold m-2'>lil cat 🐈‍⬛</h1>
+            <h1 className='text-3xl font-bold mt-20'>lil cat 🐈‍⬛</h1>
             
-            <img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty" />
+            <img className='rounded-3xl border-4 border-black my-10' src={cat.img_Url} alt="a cute kitty" />
 
             <form 
                 onSubmit ={addFavorite}
