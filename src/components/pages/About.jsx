@@ -9,7 +9,19 @@ export default function About() {
                <h3>At General Assembly, the dedicated web developers who love their pet cats have created this website known as Pod Cats.</h3>
                <h3>These are their stories.</h3>
 
-               {/* Yo teammates! Get you a picture of you and your cat, along with a little blurb of text about yourself */}
+               <br></br>
+               <br></br>
+               <br></br>
+
+               {/* Thomas: */}
+               <div>
+                    <img src='https://cdn2.thecatapi.com/images/16h.jpg'></img>
+                    <br></br>
+                    <h1>Thomas</h1>
+                    <br></br>
+                    <h4>Thomas is a grumpy old man on the outside, but a lil cutie patootie on the inside. He enjoys weird and obscure music, long bike rides through nature, deep talks about philosophy/the state of humanity, and immature humor- although he pretends to enjoy immature humor ironically. He is too hip and cool for his own damn good.</h4>
+               </div>
+               
           </div>
      )
 }
