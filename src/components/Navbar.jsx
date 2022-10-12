@@ -5,15 +5,15 @@ export default function Navbar({ currentUser, handleLogout }) {
 		<section>
 			{/* if the user is logged in... */}
 			<Link to="/">
-				<span onClick={handleLogout}>logout</span>
+				<span onClick={handleLogout}>Logout</span>
 			</Link>
 			<> | </>
 			<Link to="/profile">
-				profile
+				Profile
 			</Link>
 			<> | </>
 			<Link to="/cats/new">
-				Add your cat
+				Add your cat!
 			</Link>
 		</section>
 	 )
@@ -22,11 +22,11 @@ export default function Navbar({ currentUser, handleLogout }) {
 		<>
 			{/* if the user is not logged in... */}
 			<Link to="/register">
-				register
-			</Link>
-
+				Register
+					</Link>
+			{' | '}
 			<Link to="/login">
-				login
+				Login
 			</Link>
 		</>
 	 )
@@ -36,22 +36,23 @@ export default function Navbar({ currentUser, handleLogout }) {
 			{currentUser ? loggedIn : loggedOut}
 
 			{/* user always sees this section */}
+			{' | '}
 			<Link to="/">
-				<p>User App</p>
+				Homepage
 			</Link>
-
+			{' | '}
 			<Link to="/cats">
-				<p>see some cats</p>
+				Random Cats
 			</Link>
-			
+			{' | '}
 			<Link to="/feed">
-				<p>Cat feed</p>
+				Cat Feed
 			</Link>
-
+			{' | '}
 			<Link to="/about">
-				<p>About the dev team</p>
+				About the Dev team
 			</Link>
-
+			{' | '}
 		</nav>
 	)
 }
