@@ -130,7 +130,11 @@ export default function Cat({currentUser, setCurrentUser }) {
     )
     return (
         <div className='flex items-center flex-col justify-center'>
-            {currentUser ? catPic : loginMessage}            
+            {currentUser ? catPic : loginMessage}
+            <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' />
+            <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' />
+            <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' />
+            <img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' />            
         </div>
     )
 

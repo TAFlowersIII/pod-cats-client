@@ -20,6 +20,22 @@ img {
   width: 250px;
 }
 
+.rightLongCat {
+  position: fixed;
+  right: 0;
+  bottom: 30%;
+  width: 200px;
+  height: 500px;
+}
+
+.leftLongCat {
+  position: fixed;
+  left: 0;
+  bottom: 30%;
+  width: 200px;
+  height: 500px;
+}
+
 body {
   background-image: url('https://img5.goodfon.com/wallpaper/nbig/c/56/nekachestvennye-oboi-iavnye-artefakty-uvelichennye-do-bolshe.jpg');
   background-size: cover;
