@@ -48,14 +48,13 @@ export default function Register({ currentUser, setCurrentUser }) {
 	}
 
 	return (
-		<div>
-			<h1>Register for an account:</h1>
-
+		<div className='md:flex md:justify-center m-10'>
 			<p>{msg}</p>
-			<div className="w-full max-w-xs object-center">
+			<div className="w-full max-w-xs">
 
 				<form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
 					<div className="mb-4">
+						<p className='text-3xl font-bold mb-10'> Create your account </p>
 						<label  
 							className="block text-gray-700 text-sm font-bold mb-2" 
 							htmlFor='name'

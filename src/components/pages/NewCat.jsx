@@ -53,15 +53,15 @@ export default function NewCat(){
     }
 
     return(
-        <div>
-            <h1>Add a new Cat</h1>
+        <div className='md:flex md:justify-center m-10'>
             <p>{errorMessage}</p>
 
             <div className="w-full max-w-xs object-center">
                 <form 
                     className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
                     onSubmit={handleSubmit}
-                >
+                    >
+                    <p className='text-3xl font-bold mb-10'>Add a new Cat</p>
                     <div className='mb-4'>
                         <label 
                             className="block text-gray-700 text-sm font-bold mb-2" 
