@@ -30,7 +30,7 @@ export default function Feed() {
         //     <p>{comment}</p>
         // })
         return(
-        <div key={cat._id}>
+        <div key={cat._id} className='flex items-center flex-col justify-center'>
             <h3>{cat.header}</h3>
             <Link to={`/cats/id/${cat.catId}`}>
                 <img src={cat.img_Url} />
