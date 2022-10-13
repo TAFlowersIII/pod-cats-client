@@ -108,12 +108,12 @@ function App() {
           <Route
           path='/profile/account' element = {<Account currentUser={currentUser} handleLogout={handleLogout} setCurrentUser={setCurrentUser}/>}/>
         </Routes>
-        <img className='leftCat' src= 'https://i.imgur.com/fGAzAtW.png' alt='black cat looking up' />
-        <img className='rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' alt='black cat looking up' />
-        <img className='rightLongCat' src='https://i.imgur.com/nvUPSwj.png' alt='a long cat' />
-        <img className='leftLongCat' src='https://i.imgur.com/PWQqz04.png' alt='a long cat' />
-        <img className='leftTopCat' src='https://i.imgur.com/UYWkQb9.png' alt='a flying orange cat' />
-        <img className='rightTopCat' src='https://i.imgur.com/IWZXtw8.png' alt='a flying orange cat' />        
+        <img className='sideCat leftCat' src= 'https://i.imgur.com/fGAzAtW.png' alt='black cat looking up' />
+        <img className='sideCat rightCat' src= 'https://i.imgur.com/Tpl6G6b.png' alt='black cat looking up' />
+        <img className='sideCat rightLongCat' src='https://i.imgur.com/nvUPSwj.png' alt='a long cat' />
+        <img className='sideCat leftLongCat' src='https://i.imgur.com/PWQqz04.png' alt='a long cat' />
+        <img className='sideCat leftTopCat' src='https://i.imgur.com/UYWkQb9.png' alt='a flying orange cat' />
+        <img className='sideCat rightTopCat' src='https://i.imgur.com/IWZXtw8.png' alt='a flying orange cat' />        
       </div>
     </Router>
   );
