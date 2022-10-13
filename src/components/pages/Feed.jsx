@@ -31,11 +31,11 @@ export default function Feed() {
         // })
         return(
         <div key={cat._id} className='flex items-center flex-col justify-center'>
-            <h3>{cat.header}</h3>
+            <h3 className='text-xl font-bold'>{cat.header}</h3>
             <Link to={`/cats/id/${cat.catId}`}>
-                <img className='rounded-3xl border-4 border-black' src={cat.img_Url} />
+                <img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt='a cat' />
             </Link>
-            {/* <p>Posted by: {cat.user[0].name}</p> */}
+            <p className='text-xl font-bold'>Posted by: {cat.user[0].name}</p>
             <p>Description: {cat.content}</p>
             <br></br>
             <br></br>

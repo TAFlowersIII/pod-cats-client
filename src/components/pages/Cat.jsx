@@ -73,6 +73,7 @@ export default function Cat({currentUser, setCurrentUser }) {
             thisUser.cats = emptyArray
             setCurrentUser(thisUser)
             navigate('/feed')
+            window.location.reload()
         } catch(err) {
             console.warn(err)
             if (err.response) {
@@ -83,15 +84,15 @@ export default function Cat({currentUser, setCurrentUser }) {
 
     const catPic = (
         <div className='flex flex-col justify-center'>
-            <h1 className='text-3xl font-bold mt-20'>lil cat 🐈‍⬛</h1>
+            <h1 className='text-3xl font-bold mt-10'>lil cat 🐈‍⬛</h1>
             
             <img className='rounded-3xl border-4 border-black my-10' src={cat.img_Url} alt="a cute kitty" />
 
             <form 
                 onSubmit ={addFavorite}
-                className="w-full max-w-sm flex flex-col justify-center items-center"
+                className="w-full max-w-md flex flex-col justify-center mx-auto items-center"
             >
-                <div className='flex items-center py-2'>
+                <div className='flex items-center py-2 mb-20'>
                     <div className='border-b border-teal-500 m-2'>
                         <label htmlFor='header'>I dub thee:</label>
                         <input 
@@ -105,14 +106,14 @@ export default function Cat({currentUser, setCurrentUser }) {
                         ></input>
                     </div>
 
-                    <div className='border-b border-teal-500 '>
+                    <div className='border-b mx-3 border-teal-500 '>
                         <label htmlFor='content'>Description:</label>
                         <input 
                             className=' bg-transparent border-none w-full text-black-700 mr-3 py-1 px-2'
                             type='text' 
                             id='content' 
                             value={cat.content}
-                            placeholder='...ZoomBoi...' 
+                            placeholder='Zoomy Boi...' 
                             onChange={e => setCat({...cat, content: e.target.value})}
                             required
                         ></input>
@@ -127,9 +128,9 @@ export default function Cat({currentUser, setCurrentUser }) {
     )
     const loginMessage = (
         <div>
-            <h1 className='text-3xl font-bold'>🐾 Log in to get your paws on this cat's details! 🐾</h1>
+            <h1 className='text-3xl font-bold mt-20'>🐾 Log in to get your paws on this cat's details! 🐾</h1>
             <Link to='/login' >
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-blue-500 hover:bg-blue-700 mt-20 text-white font-bold py-2 px-4 rounded-full">
                     Log in
                 </button>
             </Link>
