@@ -63,6 +63,13 @@ img {
   .sideCat {
     display: none;
   }
+
+}
+
+@media only screen and (max-width: 500px ){
+  .buttonContainer {
+    display: flex;
+  }
 }
 
 .devCats {
