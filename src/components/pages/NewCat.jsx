@@ -108,7 +108,7 @@ export default function NewCat({currentUser}){
                         placeholder='Describe your cat...' 
                         onChange={e => setCat({...cat, content: e.target.value})}></input>
                     </div>
-                    <button type='submit' className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Add to Collection</button>
+                    <button type='submit' className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full">Add to Collection</button>
                 </form>
             </div>
         </div>
@@ -116,9 +116,9 @@ export default function NewCat({currentUser}){
 
     const loginMessage = (
         <div>
-            <p>Log in to add your cat!</p>
+            <p className='text-3xl font-bold mt-20'>Log in to add your cat!</p>
             <Link to='/login'>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white mt-20 font-bold py-2 px-4 rounded-full">
                     Log in
                 </button>
             </Link>

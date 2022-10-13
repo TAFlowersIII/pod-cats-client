@@ -95,12 +95,12 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			console.log('MAP OUT CATS',cat)
 		return(
 		<div key={cat._id} className='flex items-center flex-col justify-center'>
-			<h3>{cat.header}</h3>
+			<h3 className='text-xl font-bold'>{cat.header}</h3>
 			<img className='rounded-3xl border-4 border-black' src={cat.img_Url} alt="a cute kitty"/>
 			<p>{cat.content}</p>
 			{/* <p>{catComment}</p> */}
 			{/* <br/> */}
-			<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
+			<button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 mt-2 rounded-full" id={cat._id} onClick={() => handleDelete(`${cat._id}`)}>Delete from Favorites</button>
 			<br></br>
 			<br></br>
 		</div>
@@ -116,12 +116,12 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			<br></br>
 			<br></br>
 			<Link to='/profile/account' >
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full">
                     Account Settings
                 </button>
             </Link>
 			<Link to='/cats' >
-                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 ml-16 rounded-full">
                     Click Meow to Add Cats!
                 </button>
             </Link>
