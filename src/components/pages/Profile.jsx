@@ -115,16 +115,18 @@ export default function Profile({ currentUser, setCurrentUser, handleLogout }) {
 			<p> Thank you for signing up. Enjoy sharing your cat(s) with other cat enthusiasts.</p>
 			<br></br>
 			<br></br>
-			<Link to='/profile/account' >
-                <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full">
-                    Account Settings
-                </button>
-            </Link>
-			<Link to='/cats' >
-                <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 ml-16 rounded-full">
-                    Click Meow to Add Cats!
-                </button>
-            </Link>
+			<div className='buttonContainer'>
+				<Link to='/profile/account' >
+					<button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full">
+						Account Settings
+					</button>
+				</Link>
+				<Link to='/cats' >
+					<button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 ml-16 rounded-full">
+						Click Meow to Add Cats!
+					</button>
+				</Link>
+			</div>
 
 			<h3>{msg}</h3>
 
