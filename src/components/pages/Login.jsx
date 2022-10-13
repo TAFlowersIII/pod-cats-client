@@ -86,12 +86,12 @@ export default function Login({ currentUser, setCurrentUser }) {
 						value={password}
 					/>
 
-					<button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Login</button>
+					<button type="submit" className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full">Login</button>
 
 				</form>
 				<p>Don't have an account?</p>
 
-				<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"> 
+				<button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full"> 
 					<Link to='/register'>Register here!</Link>
 				</button>
 			</div>

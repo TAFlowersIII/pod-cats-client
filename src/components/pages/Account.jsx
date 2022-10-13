@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import jwt_decode from 'jwt-decode'
@@ -127,7 +127,7 @@ export default function Account({currentUser, handleLogout, setCurrentUser}) {
                         onChange={e => setNewPassword(e.target.value)}
                         value={newPassword}
                         required/>
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type='submit'>Submit Changes</button>
+                    <button className="bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-white font-bold py-2 px-4 rounded-full" type='submit'>Submit Changes</button>
             </form>
             </div>
             <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" onClick={deleteUser}>Delete Account</button>
