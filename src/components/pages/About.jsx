@@ -28,7 +28,7 @@ export default function About() {
                          <h4>Stephen enjoys meditating in his sleep. He ponders on the mysteries of life and enjoys learning new things. One thing to know about Stephen is that he truly enjoys making people laugh and helping others to the best of his abilities. His goal is to make people love cats just as much as he does.</h4>
                     </div>
                     <div className='border-2 border-black rounded p-2 my-2'>
-                         <img className='devCats mx-auto rounded' alt='Matt Cat' src='https://i.imgur.com/m6lOLAB.jpg'></img>
+                         <img className='devCats mx-auto rounded' alt='Matt Cat' src='https://i.imgur.com/xCM6JSk.png'></img>
                          <br></br>
                          <h1 className='font-bold text-xl'>Matt</h1>
                          <br></br>

@@ -6,8 +6,8 @@ export default function Welcome() {
 		<div className='flex flex-col justify-items-center content-center items-center mx-auto w-1/2'>
 
 			<div>
-				<h1 className='text-3xl font-medium font-serif mt-20'>Welcome To Pod Cats!</h1>
-				<h3>Browse some cats, and save your favorites!</h3>
+				<h1 className='text-3xl font-medium font-serif mt-20 mb-2'>Welcome To Pod Cats!</h1>
+				<h3>A mobile-first application designed for all cat enthusiasts to browse, save, and share cat pictures on a live feed. </h3>
 			<br></br>
 				<img className='rounded-3xl border-4 border-black mx-auto' 
 				src="https://coed.com/wp-content/uploads/2018/01/shutterstock_1031589889.jpg"

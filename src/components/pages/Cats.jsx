@@ -31,7 +31,8 @@ export default function Cats() {
     })
     return(
         <div>
-            <h1 className="text-3xl font-medium font-serif mt-20 mb-12">Here's some cats!</h1>
+            <h1 className="text-3xl font-medium font-serif mt-20 mb-4">Here's some cats!</h1>
+            <p className="mb-6">Choose your favorite cat and add to your profile to share with everyone!</p>
             {showCats}
         </div>
     )
