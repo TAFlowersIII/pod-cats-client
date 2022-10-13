@@ -73,6 +73,7 @@ export default function Cat({currentUser, setCurrentUser }) {
             thisUser.cats = emptyArray
             setCurrentUser(thisUser)
             navigate('/feed')
+            window.location.reload()
         } catch(err) {
             console.warn(err)
             if (err.response) {
