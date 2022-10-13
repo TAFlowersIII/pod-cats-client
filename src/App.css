@@ -10,38 +10,44 @@ img {
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 250px;
+  /* width: 250px; */
+  width: 25vh
 }
 
 .leftCat {
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 250px;
+  /* width: 250px; */
+  width: 25vh
 }
 
 .rightLongCat {
   position: fixed;
   right: 0;
   bottom: 25%;
-  width: 200px;
-  height: 500px;
+  /* width: 200px; */
+  width: 30vh;
+  /* height: 500px; */
+  height: 55vh;
 }
 
 .leftLongCat {
   position: fixed;
   left: 0;
   bottom: 25%;
-  width: 200px;
-  height: 500px;
+  /* width: 200px; */
+  width: 30vh;
+  /* height: 500px; */
+  height: 55vh;
 }
 
 .leftTopCat {
   position: fixed;
   left: 0;
   bottom: 80%;
-  width: 150px;
-  
+  /* width: 150px; */
+  width: 16vh;
 }
 
 .rightTopCat {
@@ -49,11 +55,32 @@ img {
   right: 0;
   bottom: 80%;
   width: 150px;
+  /* width: */
+  width: 16vh;
+}
+
+@media only screen and (max-width: 750px) {
+  .sideCat {
+    display: none;
+  }
 }
 
 .devCats {
   width: 500px;
   height: 350px; 
+}
+
+.topRow, .bottomRow {
+  flex: 1 1 calc(100% - 50px);
+}
+
+.devs {
+  flex: 0 0 50px;
+}
+
+.devContainer {
+  display: flex;
+  /* flex-wrap: wrap; */
 }
 
 body {
